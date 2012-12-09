@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile:</b>
+  <%= @linkedin_transition.profile_id %>
+</p>
+
+<p>
+  <b>From company:</b>
+  <%= @linkedin_transition.from_company_id %>
+</p>
+
+<p>
+  <b>From company name:</b>
+  <%= @linkedin_transition.from_company_name %>
+</p>
+
+<p>
+  <b>From company position:</b>
+  <%= @linkedin_transition.from_company_position %>
+</p>
+
+<p>
+  <b>From company industry:</b>
+  <%= @linkedin_transition.from_company_industry %>
+</p>
+
+<p>
+  <b>To company:</b>
+  <%= @linkedin_transition.to_company_id %>
+</p>
+
+<p>
+  <b>To company name:</b>
+  <%= @linkedin_transition.to_company_name %>
+</p>
+
+<p>
+  <b>To company position:</b>
+  <%= @linkedin_transition.to_company_position %>
+</p>
+
+<p>
+  <b>To company industry:</b>
+  <%= @linkedin_transition.to_company_industry %>
+</p>
+
+<p>
+  <b>Joined date:</b>
+  <%= @linkedin_transition.joined_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_linkedin_transition_path(@linkedin_transition) %> |
+<%= link_to 'Back', linkedin_transitions_path %>

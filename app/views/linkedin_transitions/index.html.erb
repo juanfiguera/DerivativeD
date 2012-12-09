@@ -1,0 +1,41 @@
+<h1>Listing linkedin_transitions</h1>
+
+<table>
+  <tr>
+    <th>Profile</th>
+    <th>From company</th>
+    <th>From company name</th>
+    <th>From company position</th>
+    <th>From company industry</th>
+    <th>To company</th>
+    <th>To company name</th>
+    <th>To company position</th>
+    <th>To company industry</th>
+    <th>Joined date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @linkedin_transitions.each do |linkedin_transition| %>
+  <tr>
+    <td><%= linkedin_transition.profile_id %></td>
+    <td><%= linkedin_transition.from_company_id %></td>
+    <td><%= linkedin_transition.from_company_name %></td>
+    <td><%= linkedin_transition.from_company_position %></td>
+    <td><%= linkedin_transition.from_company_industry %></td>
+    <td><%= linkedin_transition.to_company_id %></td>
+    <td><%= linkedin_transition.to_company_name %></td>
+    <td><%= linkedin_transition.to_company_position %></td>
+    <td><%= linkedin_transition.to_company_industry %></td>
+    <td><%= linkedin_transition.joined_date %></td>
+    <td><%= link_to 'Show', linkedin_transition %></td>
+    <td><%= link_to 'Edit', edit_linkedin_transition_path(linkedin_transition) %></td>
+    <td><%= link_to 'Destroy', linkedin_transition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Linkedin transition', new_linkedin_transition_path %>

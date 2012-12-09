@@ -1,0 +1,57 @@
+<%= form_for(@linkedin_transition) do |f| %>
+  <% if @linkedin_transition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@linkedin_transition.errors.count, "error") %> prohibited this linkedin_transition from being saved:</h2>
+
+      <ul>
+      <% @linkedin_transition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profile_id %><br />
+    <%= f.number_field :profile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :from_company_id %><br />
+    <%= f.number_field :from_company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :from_company_name %><br />
+    <%= f.text_field :from_company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :from_company_position %><br />
+    <%= f.text_field :from_company_position %>
+  </div>
+  <div class="field">
+    <%= f.label :from_company_industry %><br />
+    <%= f.number_field :from_company_industry %>
+  </div>
+  <div class="field">
+    <%= f.label :to_company_id %><br />
+    <%= f.number_field :to_company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :to_company_name %><br />
+    <%= f.text_field :to_company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :to_company_position %><br />
+    <%= f.text_field :to_company_position %>
+  </div>
+  <div class="field">
+    <%= f.label :to_company_industry %><br />
+    <%= f.number_field :to_company_industry %>
+  </div>
+  <div class="field">
+    <%= f.label :joined_date %><br />
+    <%= f.date_select :joined_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
