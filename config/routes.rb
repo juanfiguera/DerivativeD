@@ -1,4 +1,13 @@
 DerivativeD::Application.routes.draw do
+  authenticated :user do
+    root :to => 'home#index'
+  end
+  root :to => "home#index"
+  devise_for :users
+  resources :users
+
+  resources :linkedin_transitions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,5 +63,5 @@ DerivativeD::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+   match ':controller(/:action(/:id))(.:format)'
 end
